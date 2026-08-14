@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENT Doctor Brooklyn | Trusted Otolaryngologist in Bay Ridge, NY</title>
+<meta name="description" content="ENT Doctor Brooklyn is a leading Otolaryngologist practice in Bay Ridge treating ear infections, sinus issues, tonsils & adenoids, hearing loss, sleep apnea and more. Call 347-428-7916.">
+<link rel="icon" href="https://s.floomby.com/uploads/s/140826/wQV232NC.jpg?download=1&name=Screenshot-14-08-2026%2008:50:13.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F7F6;
+    --surface:#FFFFFF;
+    --ink:#132B27;
+    --ink-soft:#3E5551;
+    --teal:#1F5C55;
+    --teal-dark:#0F332E;
+    --teal-pale:#E4EFEC;
+    --accent:#E4633F;
+    --accent-dark:#C64F30;
+    --line:#DCE6E3;
+    --radius:14px;
+    --shadow: 0 12px 32px -18px rgba(15,51,46,0.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    color:var(--teal-dark);
+    margin:0 0 .4em;
+    letter-spacing:-0.01em;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    color:var(--accent-dark);
+    display:inline-flex;
+    align-items:center;
+    gap:.5em;
+    margin-bottom:1em;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:2px; background:var(--accent);
+    display:inline-block;
+  }
+  section{padding:88px 0;}
+  .btn{
+    display:inline-flex; align-items:center; gap:.5em;
+    padding:14px 26px;
+    border-radius:999px;
+    font-weight:600;
+    font-size:.95rem;
+    text-decoration:none;
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .btn-primary{ background:var(--accent); color:#fff; box-shadow:0 10px 22px -10px rgba(228,99,63,.65);}
+  .btn-primary:hover{ background:var(--accent-dark); transform:translateY(-2px);}
+  .btn-outline{ border-color:var(--teal); color:var(--teal-dark); background:transparent;}
+  .btn-outline:hover{ background:var(--teal-pale); transform:translateY(-2px);}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(244,247,246,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 0;
+  }
+  .brand{ display:flex; align-items:center; gap:12px; text-decoration:none;}
+  .brand img{ height:44px; width:44px; border-radius:10px; object-fit:cover;}
+  .brand-text{ font-family:'Fraunces', serif; font-weight:600; font-size:1.08rem; color:var(--teal-dark); line-height:1.15;}
+  .brand-text span{ display:block; font-family:'IBM Plex Mono', monospace; font-size:.66rem; letter-spacing:.08em; color:var(--ink-soft); text-transform:uppercase; font-weight:400;}
+  nav.links{ display:flex; gap:30px; font-size:.92rem; font-weight:500;}
+  nav.links a{ text-decoration:none; color:var(--ink-soft); transition:color .15s;}
+  nav.links a:hover{ color:var(--teal-dark);}
+  .nav-cta{ display:flex; align-items:center; gap:14px;}
+  .nav-phone{ font-family:'IBM Plex Mono', monospace; font-size:.9rem; color:var(--teal-dark); text-decoration:none; font-weight:500;}
+  .menu-toggle{ display:none; background:none; border:none; cursor:pointer;}
+
+  /* ===== Waveform divider ===== */
+  .waveform{ display:flex; align-items:flex-end; gap:4px; height:34px; opacity:.9;}
+  .waveform span{
+    display:block; width:4px; border-radius:3px;
+    background:linear-gradient(180deg, var(--accent), var(--teal));
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    padding:76px 0 0;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:56px;
+    align-items:center;
+  }
+  .hero h1{ font-size:clamp(2.3rem, 4vw, 3.3rem); line-height:1.08;}
+  .hero p.lead{ font-size:1.08rem; color:var(--ink-soft); max-width:46ch; margin-bottom:2em;}
+  .hero-actions{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:2.4em;}
+  .hero-stats{ display:flex; gap:34px; flex-wrap:wrap;}
+  .hero-stats div strong{ display:block; font-family:'Fraunces', serif; font-size:1.6rem; color:var(--teal-dark);}
+  .hero-stats div small{ font-family:'IBM Plex Mono', monospace; font-size:.68rem; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft);}
+  .hero-img-wrap{ position:relative;}
+  .hero-img-wrap img{
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    aspect-ratio:4/5; object-fit:cover;
+  }
+  .hero-badge{
+    position:absolute; bottom:-22px; left:-22px;
+    background:var(--surface); border-radius:16px;
+    padding:16px 20px; box-shadow:var(--shadow);
+    display:flex; align-items:center; gap:12px;
+    max-width:230px;
+  }
+  .hero-badge .dot{ width:10px; height:10px; border-radius:50%; background:var(--accent); flex-shrink:0;}
+  .hero-badge p{ margin:0; font-size:.8rem; color:var(--ink-soft); line-height:1.4;}
+  .hero-waveform-row{ margin-top:60px; padding:22px 0; border-top:1px solid var(--line);}
+  .hero-waveform-row .wrap{ display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;}
+  .hero-waveform-row p{ margin:0; font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft);}
+
+  /* ===== Services ===== */
+  .section-head{ max-width:640px; margin-bottom:52px;}
+  .section-head p{ color:var(--ink-soft); font-size:1.02rem;}
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:22px;
+  }
+  .service-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:30px 26px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .service-card:hover{ transform:translateY(-4px); box-shadow:var(--shadow);}
+  .service-icon{
+    width:46px; height:46px; border-radius:12px;
+    background:var(--teal-pale);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:18px;
+  }
+  .service-icon svg{ width:22px; height:22px; stroke:var(--teal); fill:none; stroke-width:1.7;}
+  .service-card h3{ font-size:1.08rem; margin-bottom:.5em;}
+  .service-card p{ font-size:.92rem; color:var(--ink-soft); margin:0;}
+
+  /* ===== Why choose ===== */
+  .why{ background:var(--teal-dark); color:#EFF6F4;}
+  .why h2{ color:#fff;}
+  .why-grid{ display:grid; grid-template-columns:.9fr 1.1fr; gap:60px; align-items:center;}
+  .why-img{ border-radius:20px; overflow:hidden; box-shadow:0 20px 50px -20px rgba(0,0,0,.5);}
+  .why-img img{ aspect-ratio:4/3; object-fit:cover;}
+  .why-list{ list-style:none; margin:0; padding:0; display:grid; gap:22px;}
+  .why-list li{ display:flex; gap:16px; align-items:flex-start;}
+  .why-num{
+    font-family:'IBM Plex Mono', monospace; font-size:.78rem;
+    width:34px; height:34px; border-radius:50%;
+    border:1px solid rgba(255,255,255,.35);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; margin-top:2px;
+  }
+  .why-list h3{ color:#fff; font-size:1.05rem; margin:0 0 .3em;}
+  .why-list p{ margin:0; color:#C7DBD6; font-size:.92rem;}
+
+  /* ===== FAQ ===== */
+  .faq-list{ max-width:820px; margin:0 auto; display:grid; gap:14px;}
+  details{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:22px 26px;
+  }
+  details[open]{ box-shadow:var(--shadow);}
+  summary{
+    cursor:pointer; list-style:none;
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem;
+    color:var(--teal-dark);
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  summary::-webkit-details-marker{ display:none;}
+  summary::after{
+    content:"+";
+    font-family:'Inter', sans-serif; font-size:1.4rem; color:var(--accent);
+    flex-shrink:0; transition:transform .2s ease;
+  }
+  details[open] summary::after{ content:"–";}
+  details p{ margin:14px 0 0; color:var(--ink-soft); font-size:.95rem;}
+
+  /* ===== Contact ===== */
+  .contact-grid{ display:grid; grid-template-columns:.9fr 1.1fr; gap:44px;}
+  .contact-card{
+    background:var(--surface); border:1px solid var(--line);
+    border-radius:var(--radius); padding:34px; box-shadow:var(--shadow);
+  }
+  .contact-row{ display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--line);}
+  .contact-row:last-of-type{ border-bottom:none;}
+  .contact-row .ic{
+    width:38px; height:38px; border-radius:10px; background:var(--teal-pale);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .contact-row .ic svg{ width:18px; height:18px; stroke:var(--teal); fill:none; stroke-width:1.7;}
+  .contact-row h4{ margin:0 0 .2em; font-size:.95rem; color:var(--teal-dark); font-family:'Inter'; font-weight:600;}
+  .contact-row p, .contact-row a{ margin:0; font-size:.92rem; color:var(--ink-soft); text-decoration:none;}
+  .contact-row a:hover{ color:var(--accent-dark);}
+  .map-frame{ border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow);}
+  .map-frame iframe{ width:100%; height:100%; min-height:420px; border:0; display:block;}
+
+  /* ===== Footer ===== */
+  footer{ background:var(--teal-dark); color:#B9D3CD; padding:54px 0 30px;}
+  .footer-grid{ display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; padding-bottom:34px; border-bottom:1px solid rgba(255,255,255,.12);}
+  .footer-brand{ display:flex; align-items:center; gap:12px;}
+  .footer-brand img{ height:38px; width:38px; border-radius:9px; object-fit:cover;}
+  .footer-brand span{ font-family:'Fraunces', serif; color:#fff; font-weight:600;}
+  .footer-links{ display:flex; gap:50px; flex-wrap:wrap;}
+  .footer-links h5{ font-family:'IBM Plex Mono', monospace; font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:#8FB3AB; margin:0 0 14px;}
+  .footer-links ul{ list-style:none; margin:0; padding:0; display:grid; gap:9px;}
+  .footer-links a{ text-decoration:none; color:#CBE0DB; font-size:.88rem;}
+  .footer-links a:hover{ color:#fff;}
+  .footer-bottom{ padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.8rem; color:#7FA69D;}
+
+  @media (max-width: 880px){
+    nav.links{ display:none;}
+    .hero-grid, .why-grid, .contact-grid{ grid-template-columns:1fr;}
+    .services-grid{ grid-template-columns:repeat(2,1fr);}
+    .hero-badge{ position:static; margin-top:16px;}
+    section{ padding:64px 0;}
+  }
+  @media (max-width: 560px){
+    .services-grid{ grid-template-columns:1fr;}
+    .hero-stats{ gap:22px;}
+    .nav-phone{ display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img src="https://s.floomby.com/uploads/s/140826/wQV232NC.jpg?download=1&name=Screenshot-14-08-2026%2008:50:13.jpg" alt="ENT Doctor Brooklyn logo">
+      <span class="brand-text">ENT Doctor Brooklyn<span>Otolaryngologist &middot; Bay Ridge, NY</span></span>
+    </a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:3474287916">347-428-7916</a>
+      <a class="btn btn-primary" href="#contact">Book Appointment</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Board-Focused Otolaryngologist &middot; Brooklyn, NY</span>
+          <h1>Ear, Nose &amp; Throat Care Built Around Every Breath, Word, and Sound</h1>
+          <p class="lead">ENT Doctor Brooklyn is a dedicated Otolaryngologist practice in Bay Ridge treating ear infections, sinus and nasal issues, tonsils and adenoids, hearing loss, snoring, and sleep apnea for patients of every age.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:3474287916">Call 347-428-7916</a>
+            <a class="btn btn-outline" href="https://www.newyorkentinstitute.com/" target="_blank" rel="noopener">Visit Our Website</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>380 88th St</strong><small>Suite 1 &middot; Brooklyn, NY</small></div>
+            <div><strong>Otolaryngologist</strong><small>Ear · Nose · Throat</small></div>
+            <div><strong>All Ages</strong><small>Children &amp; Adults</small></div>
+          </div>
+        </div>
+        <div class="hero-img-wrap">
+          <img src="https://img.magnific.com/premium-photo/female-patient-receiving-cosmetic-treatment_1182637-134333.jpg?w=2000" alt="Patient receiving ENT consultation at ENT Doctor Brooklyn">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            <p>Same-week appointments available for new ENT patients in Bay Ridge.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-waveform-row">
+      <div class="wrap">
+        <p>Hearing &middot; Breathing &middot; Voice</p>
+        <div class="waveform" id="waveform"></div>
+        <p>347-428-7916</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our Services</span>
+        <h2>Complete Otolaryngologist Care, In One Brooklyn Office</h2>
+        <p>As a full-service Otolaryngologist and Ear Nose Throat Doctor, we diagnose and treat the conditions that affect how patients hear, breathe, sleep, and speak — with a calm, thorough approach for both kids and adults.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 3a5 5 0 0 0-5 5v4a5 5 0 0 0 5 5 3 3 0 0 1 3 3v0a2 2 0 0 1-2 2"/><circle cx="17" cy="14" r="2"/></svg></div>
+          <h3>Otolaryngology &amp; ENT Exams</h3>
+          <p>Comprehensive ear, nose, and throat evaluations from a specialist trained to diagnose the full range of ENT conditions accurately.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 1 8 8"/><path d="M4 12v6"/><circle cx="4" cy="20" r="1.4"/></svg></div>
+          <h3>Ear Infection Therapy</h3>
+          <p>Fast, effective treatment for acute and recurring ear infections, with guidance on preventing future flare-ups.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 4h6l-1 5h3l-9 11 2-8H7z"/></svg></div>
+          <h3>Tonsil &amp; Adenoid Evaluation</h3>
+          <p>Thorough tonsil and adenoid assessments for children and adults, with clear recommendations on treatment or surgical options.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.35-9.5-8.5S3 4 7 4c2 0 3.5 1.5 5 3 1.5-1.5 3-3 5-3 4 0 6.5 4.85 4.5 8.5S12 21 12 21z" transform="scale(0.8) translate(3,3)"/><path d="M6 12c1-3 3-5 6-5s5 2 6 5"/></svg></div>
+          <h3>Sinus &amp; Nasal Congestion</h3>
+          <p>Relief for chronic sinus pressure and nasal congestion from a Sinus Specialist who identifies the root cause, not just the symptom.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 9v6M18 9v6M3 11v2M21 11v2"/></svg></div>
+          <h3>Hearing Loss Evaluation</h3>
+          <p>Detailed hearing loss testing and therapy plans from a trusted Hearing Doctor, tailored to your lifestyle and needs.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 14c1.2 1.3 2.6 2 4 2s2.8-.7 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></div>
+          <h3>Sleep Apnea &amp; Snoring Therapy</h3>
+          <p>Evaluation and treatment for sleep apnea and chronic snoring, helping patients breathe — and sleep — easier.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+          <h3>Speech Delay ENT Evaluation</h3>
+          <p>ENT screening for children with speech delay, ruling out hearing or airway causes that can affect language development.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M6 4v16M6 4c4 0 4 4 8 4s4-4 4-4v10c0 0 0 4-4 4s-4-4-8-4"/></svg></div>
+          <h3>Breathing Difficulty Assessments</h3>
+          <p>Assessment of nasal and airway-related breathing difficulties, with treatment plans built around long-term comfort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section id="why" class="why">
+    <div class="wrap why-grid">
+      <div class="why-img">
+        <img src="https://img.magnific.com/premium-photo/closeup-female-otolaryngologist-examining-ear-with_926199-2396912.jpg?w=2000" alt="Otolaryngologist examining a patient's ear at ENT Doctor Brooklyn">
+      </div>
+      <div>
+        <span class="eyebrow">Why Choose Us</span>
+        <h2>Why Choose ENT Doctor Brooklyn?</h2>
+        <ul class="why-list">
+          <li>
+            <span class="why-num">1</span>
+            <div>
+              <h3>A Dedicated Otolaryngologist, Not a General Referral</h3>
+              <p>Patients see a specialist focused entirely on ear, nose, and throat health — no guesswork, no unnecessary detours.</p>
+            </div>
+          </li>
+          <li>
+            <span class="why-num">2</span>
+            <div>
+              <h3>Care For Every Age</h3>
+              <p>From a toddler's ear infection to an adult's sinus or hearing concern, our team treats the whole family in one place.</p>
+            </div>
+          </li>
+          <li>
+            <span class="why-num">3</span>
+            <div>
+              <h3>Conveniently Located in Bay Ridge</h3>
+              <p>Our office at 380 88th Street is easy to reach for patients throughout Brooklyn and southern Bay Ridge.</p>
+            </div>
+          </li>
+          <li>
+            <span class="why-num">4</span>
+            <div>
+              <h3>Clear, Unhurried Explanations</h3>
+              <p>We take time to explain diagnoses and treatment options in plain language, so every patient leaves with a clear plan.</p>
+            </div>
+          </li>
+          <li>
+            <span class="why-num">5</span>
+            <div>
+              <h3>Treating Root Causes, Not Just Symptoms</h3>
+              <p>Whether it's chronic congestion, snoring, or hearing loss, we look for the underlying cause to guide lasting treatment.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center;">
+        <span class="eyebrow" style="justify-content:center;">FAQs</span>
+        <h2>Common Questions About Our Otolaryngologist Care</h2>
+        <p>Answers to what new patients most often ask before their first visit.</p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>What does an Otolaryngologist treat?</summary>
+          <p>An Otolaryngologist, also known as an Ear Nose Throat Doctor, diagnoses and treats conditions affecting the ears, nose, sinuses, and throat — including ear infections, sinus congestion, tonsil and adenoid issues, hearing loss, snoring, and sleep apnea.</p>
+        </details>
+        <details>
+          <summary>Do you see children as well as adults?</summary>
+          <p>Yes. We regularly treat children for ear infections, tonsil and adenoid concerns, and speech-delay ENT evaluations, alongside adult patients dealing with sinus, hearing, or sleep-related issues.</p>
+        </details>
+        <details>
+          <summary>How do I know if I need a Sinus Specialist?</summary>
+          <p>If you experience ongoing nasal congestion, facial pressure, or sinus infections that keep returning, it's worth having an evaluation. Our Otolaryngologist can determine whether the cause is structural, allergy-related, or infectious.</p>
+        </details>
+        <details>
+          <summary>Can snoring or sleep apnea actually be treated here?</summary>
+          <p>Yes. We evaluate snoring and sleep apnea symptoms, identify airway or nasal factors that may be contributing, and recommend a therapy plan suited to your situation.</p>
+        </details>
+        <details>
+          <summary>How do I book an appointment?</summary>
+          <p>Call our Brooklyn office directly at 347-428-7916, or visit our website to request an appointment online. New patients are welcome.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Contact Information</span>
+        <h2>Visit Our Brooklyn Otolaryngologist Office</h2>
+        <p>Reach out by phone or stop by our Bay Ridge location — our team is ready to help with ear, nose, and throat concerns for every member of the family.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-row">
+            <span class="ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div>
+              <h4>Address</h4>
+              <p>380 88th Street, Suite 1<br>Brooklyn, NY 11209</p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.3z"/></svg></span>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:3474287916">347-428-7916</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18"/><path d="M8 2v4M16 2v4"/></svg></span>
+            <div>
+              <h4>Office Hours</h4>
+              <p>Monday to Friday 09:00 am-05:00 pm_Saturday and Sunday Closed</p>
+            </div>
+          </div>
+          <div class="contact-row">
+            <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+            <div>
+              <h4>Website</h4>
+              <a href="https://www.newyorkentinstitute.com/" target="_blank" rel="noopener">newyorkentinstitute.com</a>
+            </div>
+          </div>
+          <a class="btn btn-primary" style="margin-top:22px; width:100%; justify-content:center;" href="tel:3474287916">Call to Book an Appointment</a>
+        </div>
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.3209232979984!2d-74.0293247!3d40.6213878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c245fc7fa308ed%3A0x2d4c82724db2e745!2sENT%20Doctor%20Brooklyn!5e1!3m2!1sen!2s!4v1786697968724!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://s.floomby.com/uploads/s/140826/wQV232NC.jpg?download=1&name=Screenshot-14-08-2026%2008:50:13.jpg" alt="ENT Doctor Brooklyn logo">
+        <span>ENT Doctor Brooklyn</span>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Care Areas</h5>
+          <ul>
+            <li><a href="#services">Ear Infections</a></li>
+            <li><a href="#services">Sinus &amp; Nasal</a></li>
+            <li><a href="#services">Hearing Loss</a></li>
+            <li><a href="#services">Sleep Apnea</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Get In Touch</h5>
+          <ul>
+            <li><a href="tel:3474287916">347-428-7916</a></li>
+            <li><a href="https://www.google.com/maps?cid=3264127257378219845" target="_blank" rel="noopener">Get Directions</a></li>
+            <li><a href="https://www.newyorkentinstitute.com/" target="_blank" rel="noopener">Visit Website</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 ENT Doctor Brooklyn. All rights reserved.</span>
+      <span>380 88th Street, Suite 1, Brooklyn, NY 11209</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Build the signature soundwave divider procedurally
+  (function(){
+    var wf = document.getElementById('waveform');
+    var heights = [10,18,26,14,30,20,34,16,24,12,28,18,10,22,32,14,26,18,12,20,30,16,24,10];
+    heights.forEach(function(h){
+      var bar = document.createElement('span');
+      bar.style.height = h + 'px';
+      wf.appendChild(bar);
+    });
+  })();
+</script>
+
+</body>
+</html>
